@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #7abaff;
+    }
+
+    #modelContainer {
+      position: relative;
+      width: 100vw;
+      height: 100vw;
+    }
+    #modelControls {
+      position: absolute;
+      right: 25px;
+      top: 25px;
+    }
+    #explodeButton {
+      width: 105px;
+      height: 40px;
+    }
+    #explodeButton:before {
+      content: 'Explode';
+      position: relative;
+      top: 8px;
+      background: lightgrey;
+      padding: 0.5rem 1rem;
+      position: relative;
+      font-size: 21px;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #explodeButton:checked:before {
+      background-color: darkblue;
+      color: white;
+    }
+    #explodeButton:hover:before {
+      border-color: darkblue;
+    }
+  </style>
+</head>
+<body>
+  <div id="modelContainer">
+    <div id="modelControls">
+      <input id="explodeButton" type="checkbox" />
+    </div>
+  </div>
+  <script src="./js/three.min.js"></script>
+  <script src="./js/OrbitControls.js"></script>
+  <script src="./js/OBJLoader.js"></script>
+  <script src="./js/MTLLoader.js"></script>
+  <script src="./js/stats.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
